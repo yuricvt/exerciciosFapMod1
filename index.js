@@ -90,6 +90,41 @@
     Exercício 6
 */
 
+let falta = 7;
+let tarefa = [`Português`, `Matemática`, `História`];
+let servico = Number(prompt(`Olá, aluno! O que você deseja? \n1 - Falar com professor \n2 - Falar com a Direção \n3 Consultar tarefas \n4 Sair`));
+
+if(servico == 1){
+
+    let escolhaProf = Number(prompt(`O que você gostaria de solicitar ao professor? \n1 - Tirar Dúvidas \n2 - Indicação para estudo \n3 - Sair`));
+    if(escolhaProf == 1){
+        console.log(`O professor foi notificado e irá sanar suas dúvidas assim que possível!`);
+    } else if(escolhaProf == 2){
+        console.log(`O professor irá fazer indicações para você na próxima aula!`);
+    } else {
+        console.log(`Até a próxima! Estamos sempre à disposição :D`);
+    }
+} else if(servico == 2){
+
+    let escolhaDirec = Number(prompt(`Qual assunto você gostaria de tratar com a direção? \n1 - Relatar problema \n2 - Consultar faltas \n3 - Solicitar histórico de pagamento \n4 - Sair`));
+
+    if(escolhaDirec == 1){
+        console.log(`A direção entrará em contato asim que possível.`);
+    } else if(escolhaDirec == 2){
+        console.log(`Você tem um total de ${falta} faltas`);
+        console.log(`Até a próxima! Estamos sempre à disposição :D`);
+    } else if(escolhaDirec == 3){
+        console.log(`O histórico foi enviado em PDF para seu email.`);
+        console.log(`Até a próxima! Estamos sempre à disposição :D`);
+    } else {
+        console.log(`Até a próxima! Estamos sempre à disposição :D`);
+    }
+} else if(servico == 3){
+    console.log(`Você tem ${tarefa.length} tarefas. As matérias são: ${tarefa}`);
+    console.log(`Até a próxima! Estamos sempre à disposição :D`);
+} else {
+    console.log(`Até a próxima! Estamos sempre à disposição :D`);
+}
 
 /*
     Exercício 7
